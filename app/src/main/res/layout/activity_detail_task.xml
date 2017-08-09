@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?android:listPreferredItemHeight"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingEnd="@dimen/detail_activity_horizontal_margin"
+    android:paddingStart="@dimen/detail_activity_horizontal_margin">
+
+    <LinearLayout
+        android:id="@+id/detail_task_description_linear"
+        android:layout_toStartOf="@+id/detail_task_priority_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/detail_task_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            tools:visibility="visible"
+            tools:text="complete the UI" />
+        <TextView
+            android:id="@+id/detail_task_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            tools:visibility="visible"
+            tools:text="12/31/2021" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/detail_task_priority_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:id="@+id/detail_task_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@string/ct_dsc_priority"
+            tools:src="@drawable/ic_priority"/>
+    </LinearLayout>
+</RelativeLayout>
